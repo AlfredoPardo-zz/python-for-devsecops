@@ -1,2 +1,1 @@
-# python-for-devsecops
-Python for DevSecOps
+# Python for DevSecOps
