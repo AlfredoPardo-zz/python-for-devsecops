@@ -1,0 +1,6 @@
+config:
+  azure-py-webserver:environment: public
+  azure-py-webserver:location: EastUS
+  azure-py-webserver:password:
+    secure: AAABAJ9XR9XqAT9eiGRMNjCUG5sQW6jDL3fr/OuKdgQf44FYCkNAMjdUj3zZ4MA=
+  azure-py-webserver:username: a10o
