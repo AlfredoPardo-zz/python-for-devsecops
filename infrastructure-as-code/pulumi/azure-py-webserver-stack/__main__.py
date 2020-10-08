@@ -1,5 +1,4 @@
 import pulumi
-from pulumi import Output
 from pulumi_azure import core, compute, network
 
 config = pulumi.Config()
@@ -7,7 +6,6 @@ username = config.require("username")
 password = config.require_secret("password")
 location = config.require("location")
 
-#resource_group = core.ResourceGroup("server", location="West US")
 resource_group = core.ResourceGroup("server", location=location)
 
 net = network.VirtualNetwork(
@@ -77,7 +75,7 @@ vm = compute.VirtualMachine(
         version="latest",
     ))
 
-combined_output = Output.all(vm.id, public_ip.name, public_ip.resource_group_name)
+combined_output = pulumi.Output.all(vm.id, public_ip.name, public_ip.resource_group_name)
 public_ip_addr = combined_output.apply(
     lambda lst: network.get_public_ip(name=lst[1], resource_group_name=lst[2]))
 
