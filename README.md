@@ -1,3 +1,6 @@
 # Python for DevSecOps
 
-## Infrastructure as Code with Pulumi
+**Projects**:
+
+* [Centralizing Information](https://github.com/AlfredoPardo/python-for-devsecops/tree/main/centralizing-information)
+* [Infrastructure as Code](https://github.com/AlfredoPardo/python-for-devsecops/tree/main/infrastructure-as-code/pulumi)
