@@ -1,0 +1,27 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        title Trivy Report
+    body
+        h1 Trivy Report
+        h2 {{ target }}
+        h3 Details
+        table
+            thead
+                th Vulnerability ID
+                th Package Name
+                th Installed Version
+            tbody
+                {% for vulnerability in vulnerabilities %}
+                tr
+                    td
+                        {% if "References" in vulnerability %}
+                        a(href='{{vulnerability["References"][0]}}') {{ vulnerability["VulnerabilityID"] }}
+                        {% else %}
+                        {{ vulnerability["VulnerabilityID"] }}
+                        {% endif %}
+                    td {{ vulnerability["PkgName"] }}
+                    td {{ vulnerability["InstalledVersion"] }}
+                {% endfor %}
