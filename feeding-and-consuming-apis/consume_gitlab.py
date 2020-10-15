@@ -28,7 +28,7 @@ ppjson(response.json())
 response = requests.get("{}/groups/{}/members?private_token={}".format(api_url,
     group_id, private_token), verify=False)
 
-print("{}\n{}\n{}".format(separator,"Gitlab Group Members",separator))
+print("{}\n{}\n{}".format(separator,"GitLab Group Members",separator))
 print("{}\n{}".format("\tHeaders",separator))
 for header_key, header_value in response.headers.items():
     print("\t{}: {}".format(header_key, header_value))
@@ -39,7 +39,7 @@ ppjson(response.json())
 response = requests.get("{}/projects/{}?private_token={}".format(api_url, 
     project_id, private_token), verify=False)
 
-print("{}\n{}\n{}".format(separator,"Gitlab Projects",separator))
+print("{}\n{}\n{}".format(separator,"GitLab Projects",separator))
 print("{}\n{}".format("\tHeaders",separator))
 for header_key, header_value in response.headers.items():
     print("\t{}: {}".format(header_key, header_value))
@@ -50,7 +50,7 @@ ppjson(response.json())
 response = requests.get("{}/projects/{}/members?private_token={}".format(api_url,
     project_id, private_token), verify=False)
 
-print("{}\n{}\n{}".format(separator,"Gitlab Project Members",separator))
+print("{}\n{}\n{}".format(separator,"GitLab Project Members",separator))
 print("{}\n{}".format("\tHeaders",separator))
 for header_key, header_value in response.headers.items():
     print("\t{}: {}".format(header_key, header_value))
@@ -61,7 +61,7 @@ ppjson(response.json())
 response = requests.get("{}/projects/{}/repository/commits?private_token={}".\
     format(api_url, project_id, private_token), verify=False)
 
-print("{}\n{}\n{}".format(separator,"Gitlab Repository Commits",separator))
+print("{}\n{}\n{}".format(separator,"GitLab Repository Commits",separator))
 print("{}\n{}".format("\tHeaders",separator))
 for header_key, header_value in response.headers.items():
     print("\t{}: {}".format(header_key, header_value))
@@ -73,7 +73,7 @@ response = requests.get("{}/projects/{}/repository/commits/{}/diff?private_token
                         format(api_url, project_id, commit_id, private_token),
                                verify=False)
 
-print("{}\n{}\n{}".format(separator,"Gitlab Repository Commit Details",separator))
+print("{}\n{}\n{}".format(separator,"GitLab Repository Commit Details",separator))
 print("{}\n{}".format("\tHeaders",separator))
 for header_key, header_value in response.headers.items():
     print("\t{}: {}".format(header_key, header_value))
@@ -84,7 +84,7 @@ ppjson(response.json())
 response = requests.get("{}/projects/{}/merge_requests?private_token={}".\
     format(api_url, project_id, private_token), verify=False)
 
-print("{}\n{}\n{}".format(separator,"Gitlab Project Merge Requests",separator))
+print("{}\n{}\n{}".format(separator,"GitLab Project Merge Requests",separator))
 print("{}\n{}".format("\tHeaders",separator))
 for header_key, header_value in response.headers.items():
     print("\t{}: {}".format(header_key, header_value))
@@ -95,7 +95,7 @@ ppjson(response.json())
 response = requests.get("{}/projects/{}/pipelines?private_token={}".\
     format(api_url, project_id, private_token), verify=False)
 
-print("{}\n{}\n{}".format(separator,"Gitlab Project Pipelines",separator))
+print("{}\n{}\n{}".format(separator,"GitLab Project Pipelines",separator))
 print("{}\n{}".format("\tHeaders",separator))
 for header_key, header_value in response.headers.items():
     print("\t{}: {}".format(header_key, header_value))
@@ -106,7 +106,7 @@ ppjson(response.json())
 response = requests.get("{}/projects/{}/pipelines/{}/jobs?private_token={}".\
     format(api_url, project_id, pipeline_id, private_token), verify=False)
 
-print("{}\n{}\n{}".format(separator,"Gitlab Project Pipeline Jobs",separator))
+print("{}\n{}\n{}".format(separator,"GitLab Project Pipeline Jobs",separator))
 print("{}\n{}".format("\tHeaders",separator))
 for header_key, header_value in response.headers.items():
     print("\t{}: {}".format(header_key, header_value))
